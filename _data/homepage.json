@@ -3,15 +3,6 @@
   "subtitle": "little test site/blog for moon",
   "menu": [
     {
-      "title": "read more here",
-      "entries": [
-        {
-          "title": "github",
-          "url": "http://github.com/stopnoanime/11ty-no-style-please"
-        }
-      ]
-    },
-    {
       "title": "all posts with the 'post' tag",
       "post_list": "post"
     }
