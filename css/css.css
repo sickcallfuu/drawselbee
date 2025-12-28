@@ -1,23 +1,26 @@
 html {
-    max-width: 80ch;
-    padding: 3em 1em;
+    padding: 0em 0.4em;
     margin: auto;
-    line-height: 1.75;
-    font-size: 1.4em;
-    font-family: monospace;
+    line-height: 1;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: aliceblue;
+    color: #333;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    margin: 2em 0 1em;
+.title{
+    font-style: italic;
+    font-weight: 700;
 }
-  
-p,ul,ol {
-    margin-bottom: 1em;
-    color: #1d1d1d;
+
+hr {
+    border: none;
+    border-top: 1px solid darkgray;
 }
 
 .post-meta {
-    text-align: right;
+    font-style:italic;
+    font-size: small;
 }
 
 img {

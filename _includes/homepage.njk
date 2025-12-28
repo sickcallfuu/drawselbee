@@ -2,15 +2,21 @@
 layout: base.njk
 ---
 <header>
-    <h1>{{ homepage.title or site.title }}</h1>
+    <p><i>{{ homepage.title or site.title }}</i></p>
 
     {% set subtitle = homepage.subtitle%}
     {% if subtitle %}
-        <p>{{ subtitle }}</p>
+        <p><i>{{ subtitle }}</i></p>
     {% endif %}
 </header>
 <main>
     <hr>
-    {% set entries = homepage.menu %}
-    {% include "menu.njk" %}
+<article>
+    {%- for post in collections.post -%}
+    <p class="title">{{ post.data.title }}</p>
+    <p class="post-meta">
+    <time datetime="{{ page.date }}">{{ page.date | formatDate }}</time></p>
+    {{ post.templateContent | safe }}
+    {%- endfor -%}
+    </article>
 </main>
