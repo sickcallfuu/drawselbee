@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 <header>
-    <p><i>{{ homepage.title or site.title }}</i></p>
+    <p>🌙<i>{{ homepage.title or site.title }}</i></p>
 
     {% set subtitle = homepage.subtitle%}
     {% if subtitle %}
@@ -11,12 +11,14 @@ layout: base.njk
 </header>
 <main>
     <hr>
-<article>
-    {%- for post in collections.post -%}
-    <p class="title">{{ post.data.title }}</p>
-    <p class="post-meta">
-    <time datetime="{{ page.date }}">{{ page.date | formatDate }}</time></p>
-    {{ post.templateContent | safe }}
-    {%- endfor -%}
+
+    {%- for post in collections.post | reverse -%}
+    <article>
+        <p class="title">{{ post.data.title }}</p>
+        <p class="post-meta">
+        <time datetime="{{ page.date }}">{{ page.date | formatDate }}</time></p>
+        {{ post.templateContent | safe }}
     </article>
+        {%- endfor -%}
+    
 </main>

@@ -1,10 +1,4 @@
 {
   "title": "the drawselbee",
-  "subtitle": "little test site/blog for moon",
-  "menu": [
-    {
-      "title": "all posts with the 'post' tag",
-      "post_list": "post"
-    }
-  ]
+  "subtitle": "test site/blog for moon"
 }

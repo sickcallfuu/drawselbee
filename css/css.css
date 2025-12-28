@@ -8,18 +8,26 @@ html {
     color: #333;
 }
 
-.title{
+p {
+    max-width: 50em;
+}
+
+article {
+    margin-bottom: 6em;
+}
+
+.title {
     font-style: italic;
     font-weight: 700;
 }
 
 hr {
     border: none;
-    border-top: 1px solid darkgray;
+    border-top: 1px solid thistle;
 }
 
 .post-meta {
-    font-style:italic;
+    font-style: italic;
     font-size: small;
 }
 
@@ -31,7 +39,6 @@ img {
 
 blockquote {
     font-style: italic;
-    border: thin solid black;
     padding: 1rem;
 }
 
@@ -44,18 +51,39 @@ pre {
     padding: 1rem;
 }
 
-pre, code {
+pre,
+code {
     background: #e0e0e0;
 }
 
-table { width: 100%; }
+table {
+    width: 100%;
+}
 
-table, th, td {
-  border: thin solid black;
-  border-collapse: collapse;
-  padding: 0.4rem;
+table,
+th,
+td {
+    border: thin solid #333;
+    border-collapse: collapse;
+    padding: 0.4rem;
 }
 
 .table-wrapper {
     overflow-x: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #331D49;
+        color: whitesmoke;
+    }
+
+    hr {
+        border-top: 1px solid #AA98A9;
+    }
+
+    img {
+        filter: brightness(0.9) contrast(0.9);
+    }
 }
